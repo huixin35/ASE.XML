@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASE Assignment Demo</name>
+    </assembly>
+    <members>
+        <member name="T:ASE_Assignment_Demo.AppCanvas">
+            <summary>
+            Represents a custom canvas for drawing various shapes.
+            Provides methods for moving the pen, changing pen color, and drawing shapes.
+            </summary>
+        </member>
+        <member name="M:ASE_Assignment_Demo.AppCanvas.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASE_Assignment_Demo.AppCanvas"/> class.
+            </summary>
+            <param name="graphics">The graphics object to use for drawing.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.AppCanvas.MoveTo(System.Int32,System.Int32)">
+            <summary>
+            Moves the pen to the specified coordinates without drawing.
+            </summary>
+            <param name="x">The x-coordinate to move the pen to.</param>
+            <param name="y">The y-coordinate to move the pen to.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.AppCanvas.SetPenColor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the pen color using the specified RGB values.
+            </summary>
+            <param name="r">The red component of the color (0-255).</param>
+            <param name="g">The green component of the color (0-255).</param>
+            <param name="b">The blue component of the color (0-255).</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.AppCanvas.Circle(System.Int32)">
+            <summary>
+            Draws a circle with the specified radius at the current pen position.
+            </summary>
+            <param name="radius">The radius of the circle.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.AppCanvas.Rect(System.Int32,System.Int32)">
+            <summary>
+            Draws a rectangle with the specified width and height at the current pen position.
+            </summary>
+            <param name="width">The width of the rectangle.</param>
+            <param name="height">The height of the rectangle.</param>
+        </member>
+        <member name="T:ASE_Assignment_Demo.Form1">
+            <summary>
+            Main form class for the ASE assignment demo application.
+            This form allows users to input commands and see the graphical output.
+            </summary>
+        </member>
+        <member name="M:ASE_Assignment_Demo.Form1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASE_Assignment_Demo.Form1"/> class.
+            </summary>
+        </member>
+        <member name="M:ASE_Assignment_Demo.Form1.Form1_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the load event of the form.
+            Initializes the output picture box and canvas for drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.Form1.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the click event of the Run button.
+            Reads commands from the input text box and executes them to draw shapes on the canvas.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.Form1.ExecuteCommand(System.String)">
+            <summary>
+            Executes a drawing command.
+            Supported commands include "moveto", "pen", "circle", and "rect".
+            </summary>
+            <param name="command">The command string to execute.</param>
+        </member>
+        <member name="M:ASE_Assignment_Demo.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:ASE_Assignment_Demo.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:ASE_Assignment_Demo.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>
